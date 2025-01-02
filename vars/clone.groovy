@@ -1,5 +1,5 @@
-def call(String url, String branch){
-  echo 'this is cloning the code'
-  git url: "${url}", branch: "${branch}"
-  echo 'code is clone successfully'
+// vars/code.groovy
+def call(String repoUrl, String branchName) {
+    echo "Cloning repository from ${repoUrl}, branch: ${branchName}"
+    git branch: branchName, url: repoUrl
 }
